@@ -4732,3 +4732,143 @@ Processing by RoomsController#index as HTML
   [1m[36mRoom Load (0.1ms)[0m  [1mSELECT "rooms".* FROM "rooms" [0m
   Rendered rooms/index.html.erb within layouts/application (1.5ms)
 Completed 200 OK in 8.2ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateRooms (20140712220145)
+Migrating to CreateUsers (20140713022607)
+Migrating to RenamePasswordOnUsers (20140713214052)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  CREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "full_name" varchar(255), "email" varchar(255), "password_digest" varchar(255), "location" varchar(255), "bio" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "temp_index_altered_users_on_email" ON "altered_users" ("email")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "users"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "altered_users" ("id","full_name","email","password_digest","location","bio","created_at","updated_at") VALUES (14, 'Thaiane Braga', 'thaiane@hotmail.com', 'senha', 'Brasília DF', 'Olá. Sou a Thaiane. Gosto de programar em ruby on rails. Estou vendo o jogo com minha mãe.', '2014-07-13 19:48:04.164721', '2014-07-13 20:30:50.837110')[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "users"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "full_name" varchar(255), "email" varchar(255), "password_digest" varchar(255), "location" varchar(255), "bio" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.0ms)[0m  [1mSELECT * FROM "altered_users"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "users" ("id","full_name","email","password_digest","location","bio","created_at","updated_at") VALUES (14, 'Thaiane Braga', 'thaiane@hotmail.com', 'senha', 'Brasília DF', 'Olá. Sou a Thaiane. Gosto de programar em ruby on rails. Estou vendo o jogo com minha mãe.', '2014-07-13 19:48:04.164721', '2014-07-13 20:30:50.837110')
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "altered_users"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20140713214052')
+  [1m[36m (204.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-13 18:50:24 -0300
+Connecting to database specified by database.yml
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 29.7ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-13 18:50:24 -0300
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/rooms.css?body=1" for 127.0.0.1 at 2014-07-13 18:50:24 -0300
+Served asset /rooms.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-13 18:50:24 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-13 18:50:24 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-13 18:50:24 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2014-07-13 18:50:24 -0300
+Served asset /rooms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-13 18:50:24 -0300
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-07-13 18:50:28 -0300
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (5.0ms)
+  Rendered users/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 42.8ms (Views: 10.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-13 18:50:28 -0300
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/rooms.css?body=1" for 127.0.0.1 at 2014-07-13 18:50:28 -0300
+Served asset /rooms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-13 18:50:28 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-13 18:50:28 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-13 18:50:28 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2014-07-13 18:50:28 -0300
+Served asset /rooms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-13 18:50:28 -0300
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-07-13 18:50:56 -0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eYaBroC3rBSDFPJ2d0xEJWWGIzdbYUKryMIwoz/ujzc=", "user"=>{"full_name"=>"Tomáz", "location"=>"Gama", "email"=>"tomaz@hotm.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "bio"=>"Oii. Sou o Tomáz. Gosto da Thai."}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'tomaz@hotm.com' LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "users" ("bio", "created_at", "email", "full_name", "location", "password_digest", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["bio", "Oii. Sou o Tomáz. Gosto da Thai."], ["created_at", Sun, 13 Jul 2014 21:50:56 UTC +00:00], ["email", "tomaz@hotm.com"], ["full_name", "Tomáz"], ["location", "Gama"], ["password_digest", "$2a$10$eSSf/dxRfCch2jZzH6yki.6F89Flnwu.4nQ.iAVC4qFFovOIMHNby"], ["updated_at", Sun, 13 Jul 2014 21:50:56 UTC +00:00]]
+  [1m[35m (134.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/15
+Completed 302 Found in 235.5ms (ActiveRecord: 136.2ms)
+
+
+Started GET "/users/15" for 127.0.0.1 at 2014-07-13 18:50:56 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "15"]]
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 5.0ms (Views: 3.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-13 18:50:56 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rooms.css?body=1" for 127.0.0.1 at 2014-07-13 18:50:56 -0300
+Served asset /rooms.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-07-13 18:50:56 -0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-13 18:50:56 -0300
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-13 18:50:56 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rooms.js?body=1" for 127.0.0.1 at 2014-07-13 18:50:56 -0300
+Served asset /rooms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-13 18:50:56 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
