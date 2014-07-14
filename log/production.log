@@ -1,0 +1,20 @@
+Connecting to database specified by database.yml
+Compiled jquery.js  (1ms)  (pid 3096)
+Compiled jquery_ujs.js  (0ms)  (pid 3096)
+Compiled rooms.js  (432ms)  (pid 3096)
+Compiled application.js  (444ms)  (pid 3096)
+Warning. Error encountered while saving cache /home/ThaiBraga/GitHub/Colcho.net-/tmp/cache/sass/061a65f37344620bc507b3cd26dc481524c38091/rooms.css.scssc: can't dump anonymous class #<Class:0x00000003e67f78>
+Compiled rooms.css  (73ms)  (pid 3096)
+Warning. Error encountered while saving cache /home/ThaiBraga/GitHub/Colcho.net-/tmp/cache/sass/061a65f37344620bc507b3cd26dc481524c38091/scaffolds.css.scssc: can't dump anonymous class #<Class:0x00000003e67f78>
+Compiled scaffolds.css  (5ms)  (pid 3096)
+Compiled application.css  (86ms)  (pid 3096)
+Connecting to database specified by database.yml
+Compiled jquery.js  (1ms)  (pid 3096)
+Compiled jquery_ujs.js  (0ms)  (pid 3096)
+Compiled rooms.js  (99ms)  (pid 3096)
+Compiled application.js  (111ms)  (pid 3096)
+Warning. Error encountered while saving cache /home/ThaiBraga/GitHub/Colcho.net-/tmp/cache/sass/061a65f37344620bc507b3cd26dc481524c38091/rooms.css.scssc: can't dump anonymous class #<Class:0x0000000395e810>
+Compiled rooms.css  (5ms)  (pid 3096)
+Warning. Error encountered while saving cache /home/ThaiBraga/GitHub/Colcho.net-/tmp/cache/sass/061a65f37344620bc507b3cd26dc481524c38091/scaffolds.css.scssc: can't dump anonymous class #<Class:0x0000000395e810>
+Compiled scaffolds.css  (5ms)  (pid 3096)
+Compiled application.css  (16ms)  (pid 3096)
